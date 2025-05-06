@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   lint-and-build-g6:
-    runs-on: macos-13
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -26,7 +26,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          brew install python-setuptools pkg-config cairo pango libpng jpeg giflib librsvg
+          apt update && apt install -y python3-setuptools pkg-config libcairo2 libpango1.0-0 libpng-dev libjpeg-dev giflib-tools librsvg2-dev
 
       - uses: pnpm/action-setup@v4
         name: Install pnpm
