@@ -26,7 +26,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          sudo apt update && sudo apt install -y python3-setuptools pkg-config libcairo2 libpango1.0-0 libpng-dev libjpeg-dev giflib-tools librsvg2-dev
+          sudo apt update && sudo apt install -y python3-setuptools pkg-config libcairo2 libpango-1.0-0 libpng-dev libjpeg-dev giflib-tools librsvg2-dev
 
       - uses: pnpm/action-setup@v4
         name: Install pnpm
